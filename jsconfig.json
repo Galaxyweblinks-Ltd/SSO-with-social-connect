@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "~/*": ["./*"],
+      "pages/*": ["pages/*"],
+      "modules/*": ["modules/*"],
+      "shared/*": ["shared/*"],
+      "assets/*": ["assets/*"],
+      "utils/*": [
+        "shared/utils/*"
+      ],
+      "constants/*": [
+        "shared/constants/*"
+      ],
+      "customHooks/*": [
+        "shared/CustomHooks/*"
+      ],
+      "styles/*": [
+        "shared/styles/*"
+      ]
+    }
+  },
+  "exclude": [".next", "node_modules"]
+}

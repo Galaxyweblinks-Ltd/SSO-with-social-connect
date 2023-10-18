@@ -1,0 +1,9 @@
+@import 'assets/sass/global/functions';
+@import 'assets/sass/global/variables';
+@import 'assets/sass/global/mixins';
+
+.formWrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  margin-top: 100px;
+}

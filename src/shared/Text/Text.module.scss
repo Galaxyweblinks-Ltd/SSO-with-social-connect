@@ -1,0 +1,102 @@
+@import 'assets/sass/global/functions';
+@import 'assets/sass/global/variables';
+@import 'assets/sass/global/mixins';
+
+.textWrapper {
+  //Font Color
+  &.primaryColor {
+    color: color(primary);
+  }
+  &.darkColor {
+    color: color(dark);
+  }
+  &.dangerColor {
+    color: color(danger);
+  }
+  &.lightGreyColor {
+    color: color(lightGrey);
+  }
+  &.lightBlackColor {
+    color: color(lightBlack);
+  }
+  &.tertiaryColor {
+    color: color(tertiary);
+  }
+  &.whiteColor {
+    color: color(white);
+  }
+  &.skyBlueColor {
+    color: color(skyBlue);
+  }
+  &.darkGrayButtonColor {
+    color: color(darkGrayButton);
+  }
+  &.inputBorderColor {
+    color: color(inputBorder);
+  }
+  &.secondaryColor {
+    color: color(secondary);
+  }
+  &.timerColor {
+    color: color(timer);
+  }
+
+  //Font-Size
+  &.xxxs {
+    font-size: get-font-size(xxxs);
+  }
+  &.xxs {
+    font-size: get-font-size(xxs);
+  }
+  &.xs {
+    font-size: get-font-size(xs);
+  }
+  &.sm {
+    font-size: get-font-size(sm);
+  }
+  &.md {
+    font-size: get-font-size(md);
+  }
+  &.lg {
+    font-size: get-font-size(lg);
+  }
+  &.lg {
+    font-size: get-font-size(lg);
+  }
+  &.xlg {
+    font-size: get-font-size(xlg);
+  }
+  &.fsxl {
+    font-size: get-font-size(fsxl);
+  }
+  &.fs2xl {
+    font-size: get-font-size(fs2xl);
+  }
+  &.fs3xl {
+    font-size: get-font-size(fs3xl);
+  }
+  &.fs4xl {
+    font-size: get-font-size(fs4xl);
+  }
+  &.fs5xl {
+    font-size: get-font-size(fs5xl);
+  }
+
+  //Font-family
+  &.regular {
+    font-family: get-font-family(regular);
+  }
+  &.medium {
+    font-family: get-font-family(medium);
+  }
+  &.semiBold {
+    font-family: get-font-family(semiBold);
+  }
+  &.bold {
+    font-family: get-font-family(bold);
+  }
+
+  .cursorPointer {
+    cursor: pointer;
+  }
+}

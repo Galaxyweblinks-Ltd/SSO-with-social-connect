@@ -1,0 +1,65 @@
+@import 'assets/sass/global/functions';
+@import 'assets/sass/global/variables';
+@import 'src/assets/sass/global/mixins';
+
+.socialMediaButtons {
+  padding: 0 15px; 
+  button {
+    height: 48px;
+    display: flex !important;
+    align-items: center !important;
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 5px !important;
+    position: relative;
+    justify-content: center !important;
+    text-align: center;
+    letter-spacing: 0.1px;
+    > div {
+      position: absolute;
+      top: 11px;
+      left: 16px;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    &:focus {
+      outline: none !important;
+    }
+  }
+  .googleButton {
+    margin-top: 34px;   
+    position: relative;
+    figure {
+      position: absolute;      
+      left: 16px;
+      top: 16px;
+    }
+    > button {
+      box-shadow: 0 2px 3px 0 rgba(20, 50, 80, 0.05) !important;
+      border: solid 1px color(googleButtonBorder) !important;
+      color: color(googleButtonColor) !important;
+      font-family: get-font-family(medium) !important;
+      font-size: get-font-size(lg);
+      background-color: color(white);
+    }
+  }
+  .facebookButton {
+    position: relative;    
+    figure {
+      position: absolute;
+      z-index: 1;
+      top: 12px;
+      left: 19px;
+      cursor: pointer;
+    }
+    span {
+      > button {
+        background-color: color(facebookButtonBg) !important;
+        font-family: get-font-family(regular) !important;
+        font-size: get-font-size(lg);
+        color: color(white);
+        border: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@mixin get-font-family($keyword) {
+  font-family: get-font-family($keyword);
+}
+
+@mixin font-size($keyword) {
+  font-size: get-font-size($keyword);
+}
+
+@mixin font-weight($keyword) {
+  font-weight: get-font-weight($keyword);
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == smallest) {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == smaller) {
+    @media only screen and (max-width: 500px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == small) {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == medium) {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == large) {
+    @media only screen and (max-width: 990px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == xl-large) {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == largest) {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == min-smallest) {
+    @media only screen and (min-width: 321px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == min-smaller) {
+    @media only screen and (min-width: 501px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == min-small) {
+    @media only screen and (min-width: 601px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == min-medium) {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == min-large) {
+    @media only screen and (min-width: 991px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == min-largest) {
+    @media only screen and (min-width: 1201px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == min-xl-largest) {
+    @media only screen and (min-width: 1440px) {
+      @content;
+    }
+  }
+}
+
+@mixin input-style() {
+  border-radius: 5px;
+  border: solid 1px color(inputBorder);
+  background-color: color(inputBg);
+  resize: none;
+  &:focus {
+    border: solid 1px color(primary);
+    outline: 0;
+    box-shadow: none;
+  }
+}
+@mixin input-error() {
+  &.error {
+    border: solid 1px color(danger);
+    color: color(danger);
+  }
+  &:disabled {
+    background-color: color(inputDisabled);
+    pointer-events: none;
+    border: none;
+  }
+}
+@mixin validation-error-msg() {
+  color: color(danger);
+  font-size: get-font-size(md);
+  letter-spacing: 0.09px;
+  word-break: break-word;
+}
+
+@mixin decorators {
+  &.strong {
+    font-weight: bold;
+  }
+  &.textDecoration {
+    text-decoration: underline;
+  }
+  &.pointerEvent {
+    pointer-events: none;
+  }
+}
+
+@mixin variants($fontSize) {
+  font-size: get-font-size($fontSize);
+  &.primary {
+    color: color(primary);
+  }
+  &.lightGrey {
+    color: color(lightGrey);
+  }
+  &.black {
+    color: color(lightBlack);
+  }
+  &.skyBlue {
+    color: color(skyBlue);
+  }
+  &.lightBorder {
+    color: color(lightBorder);
+  }
+  &.darkGrayButton {
+    color: color(darkGrayButton);
+  }
+}
+
+@mixin btn-styling() {
+  cursor: pointer;
+  border: 0;
+  min-width: 80px;
+  min-height: 32px;
+  font-size: get-font-size(lg);
+  border-radius: 2px;
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin status($color, $bg, $imagePath) {
+  background-color: color($bg);
+  span {
+    position: relative;
+    text-transform: capitalize;
+    @if $color == 'archiveStatusColor' {
+      left: 18px;
+    } @else {
+      left: 22px;
+    }
+    color: color($color);
+  }
+  &::before {
+    position: absolute;
+    bottom: 4px;
+    content: '';
+    background: {
+      image: url('../../../../src/assets/images/' + $imagePath);
+    }
+    width: 14px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin random-color($selector) {
+  #{$selector}: unquote(
+    'rgba(#{random(256) - 1}, #{random(256)-1}, #{random(256 - 1)}, #{random(100)/100})'
+  );
+}
+
+@mixin random-bgr() {
+  background: rgb(random(255), random(255), random(255));
+}
