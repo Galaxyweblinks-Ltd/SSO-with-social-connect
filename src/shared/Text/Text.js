@@ -3,15 +3,17 @@ import PropTypes from 'prop-types';
 import style from './Text.module.scss';
 
 /**
- * Name: Text
- * Desc: Render Text
- * @param {string} text
- * @param {node} children
- * @param {string} className
- * @param {string} color
- * @param {string} fontFamily
- * @param {string} fontSize
+ * Text Component
+ * Renders text with customizable styles.
+ *
+ * @param {string} text - The text content to be rendered.
+ * @param {ReactNode} children - Additional elements or components nested inside the Text component.
+ * @param {string} className - Additional CSS class for styling.
+ * @param {string} color - Text color.
+ * @param {string} fontFamily - Font family for the text.
+ * @param {string} fontSize - Font size for the text.
  */
+
 const Text = ({
   text,
   children,

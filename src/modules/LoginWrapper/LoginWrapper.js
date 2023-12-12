@@ -13,7 +13,8 @@ import Style from './LoginWrapper.module.scss';
 const LoginWrapper = () => {
   const router = useRouter();
   const sessionData = useSelector((state) => state.auth);
-
+  
+  // Effect hook to redirect to the home page if the user is already logged in
   useEffect(() => {
     if (sessionData.loggedIn) {
       router.push('/home');

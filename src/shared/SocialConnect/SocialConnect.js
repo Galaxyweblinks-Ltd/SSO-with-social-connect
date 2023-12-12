@@ -12,11 +12,12 @@ import { getFacebookAppId, getGoogleClientId } from 'shared/utils/utils';
 import Style from './SocialConnect.module.scss';
 
 /**
- * Name: SocialConnect
- * Desc: Render connect with Google and Facebook button
- 
- * @param {string} faceBookText
+ * SocialConnect Component
+ * Renders buttons to connect with Google and Facebook.
+ *
+ * @param {string} faceBookText - Text to display on the Facebook connect button.
  */
+
 
 const SocialConnect = ({ faceBookText }) => {
   const dispatch = useDispatch();
