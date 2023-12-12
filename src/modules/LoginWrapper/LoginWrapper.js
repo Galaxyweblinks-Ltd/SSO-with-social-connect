@@ -6,7 +6,7 @@ import Style from './LoginWrapper.module.scss';
 
 /**
  * Name:LoginWrapper
- * Desc: Render login submit form
+ * Desc: Render login form for social connect page 
  * @param {func} dispatch
  */
 
